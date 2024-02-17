@@ -1,2 +1,2 @@
 # Snakes
-snakes is a online game
+snakes is an online game
