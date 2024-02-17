@@ -1,0 +1,65 @@
+#include "skpch.h"
+#include "Snakes/Core/Input.h"
+
+#include "Snakes/Events/Event.h"
+
+#include <glm/glm.hpp>
+
+namespace sk {
+
+	bool Input::Quit()
+	{
+		return EventManager::Quit();
+	}
+
+	bool Input::IsKeyPressed(KeyCode keycode)
+	{
+		return EventManager::KeyJustDown(keycode);
+	}
+
+	bool Input::IsKeyReleased(KeyCode keycode)
+	{
+		return EventManager::KeyJustUp(keycode);
+	}
+
+	bool Input::IsKeyDown(KeyCode key)
+	{
+		return EventManager::KeyDown(key);
+	}
+
+	bool Input::IsKeyUp(KeyCode key)
+	{
+		return EventManager::KeyUp(key);
+	}
+
+	bool Input::IsMousePressed(MouseCode buttoncode)
+	{
+		return EventManager::MouseJustDown(buttoncode);
+	}
+
+	bool Input::IsMouseReleased(MouseCode buttoncode)
+	{
+		return EventManager::MouseJustUp(buttoncode);
+	}
+
+	bool Input::IsMouseDown(MouseCode button)
+	{
+		return EventManager::MouseDown(button);
+	}
+
+	bool Input::IsMouseUp(MouseCode button)
+	{
+		return EventManager::MouseUp(button);
+	}
+
+	glm::vec2 Input::GetMousePosition()
+	{
+		return EventManager::MousePosition();
+	}
+
+	glm::vec2 Input::GetMouseDeltaPos()
+	{
+		return EventManager::MouseDeltaPos();
+	}
+
+}
